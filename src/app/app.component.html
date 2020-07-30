@@ -1,0 +1,44 @@
+<div class="main-div">
+  <div>
+    <h1>
+      {{title}}
+    </h1>
+  </div>
+  <div class="data-div">
+    <button type="button" class="btn btn-primary" (click)="getClient0()">Get the Client 0</button>
+  </div>
+  <div class="data-div">
+    <span>Set a client name to look for</span>
+    <input [(ngModel)]="searchClient" type="text" />
+    <button type="button" class="btn btn-primary" (click)="getClientsContainingName()">Get clients</button>
+  </div>
+  <div class="data-div">
+    <button type="button" class="btn btn-primary" (click)="getAllClientsSort()">Get all the clients</button>
+  </div>
+  <div class="data-div">
+    <button type="button" class="btn btn-primary" (click)="getAllIdIsPair()">Get all clients with even ID</button>
+  </div>
+  <div class="data-div">
+    <button type="button" class="btn btn-primary" (click)="saveClient0()">Save Cliente 0</button>
+  </div>
+  <div class="data-div">
+    <input [(ngModel)]="client.name" type="text" placeholder="Name">
+    <button type="button" class="btn btn-primary" (click)="saveUser()">Save user</button>
+  </div>
+  <div class="data-div">
+    <input [(ngModel)]="selectedClientId" type="" placeholder="Choose the Client ID you want to delete" />
+    <button type="button" class="btn btn-primary" (click)="deleteClient()">Delete</button>
+  </div>
+  <div class="data-div">
+    <input [(ngModel)]="selectedClientId" type="" placeholder="ID" />
+    <input [(ngModel)]="client.name" type="" placeholder="New name" />
+    <button type="button" class="btn btn-primary" (click)="updateClient()">Update</button>
+  </div>
+  <div class="data-div">
+    <div style="margin-left: 5%; display: flex; flex-direction: row;" *ngIf="clients!=null">
+      <span style="display: flex; flex-direction: row; margin-left: 10px;" *ngFor="let client of clients">
+        {{client.id}} - {{client.name}} /
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.main-div {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.data-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1%;
+}
